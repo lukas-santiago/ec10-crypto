@@ -12,7 +12,7 @@ clientSocket = socket(AF_INET, SOCK_DGRAM)  # AF_INET6
 
 print("UDP Client\n")
 
-message = "Hello world"
+message = "The information security is of significant importance to ensure the privacy of communications"
 start = time()
 print('message: ', message)
 print('encrypting...')

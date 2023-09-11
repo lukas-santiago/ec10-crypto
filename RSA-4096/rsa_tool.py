@@ -89,8 +89,10 @@ def decrypt(message, d, n):
 def get_keys():
     if not os.path.exists(RSA_KEYS_FILE):
         print("Arquivo de chaves 'rsa_keys.json' não encontrado, gerando...")
+        start = time()
         generate_keys_and_save_to_json()
-        print("Arquivo de chaves gerado com sucesso")
+        end = time()
+        print("Arquivo de chaves gerado com sucesso. Time: ", end - start)
     try:
         with open(RSA_KEYS_FILE, "r", encoding="utf-8") as infile:
             json_keys = json.load(infile)
